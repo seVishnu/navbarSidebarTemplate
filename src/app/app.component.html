@@ -1,9 +1,53 @@
 <div class="container-fluid g-0">
-  <app-header></app-header>
+  <app-header (sidebarToggled)="sidebarStatus = $event"></app-header>
   <main>
-    <app-sidebar></app-sidebar>
-    <div class="display-area">
-      <p class="fs-1 fw-bold fst-italic">Main Display Area</p>
+    <app-sidebar
+      [sidebarStatus]="sidebarStatus"
+      [ngClass]="{ 'app-sidebar-open': sidebarStatus }"
+    ></app-sidebar>
+    <div
+      class="display-area p-3"
+      [ngClass]="{ 'display-area-shrink': sidebarStatus }"
+    >
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo
+        praesentium optio aliquam tenetur. Facere, architecto maxime. Eius
+        fugiat iusto, laudantium debitis dignissimos, eaque nobis pariatur
+        facilis, ut nostrum est. Voluptatum enim error ab quas. Facilis rem aut
+        dolorum dolore ex libero maiores iste! Ipsum corporis accusamus suscipit
+        non aliquid excepturi error, consectetur alias dolore dicta deserunt
+        voluptas incidunt saepe. Nisi placeat modi velit, labore accusamus
+        tenetur voluptatum magni, id quidem sunt itaque quam qui deleniti illum
+        animi quas aliquid facere pariatur esse ipsum voluptas libero molestias.
+        Itaque, quod alias corrupti perspiciatis ex, saepe quia aliquid amet
+        officia molestiae omnis similique.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo
+        praesentium optio aliquam tenetur. Facere, architecto maxime. Eius
+        fugiat iusto, laudantium debitis dignissimos, eaque nobis pariatur
+        facilis, ut nostrum est. Voluptatum enim error ab quas. Facilis rem aut
+        dolorum dolore ex libero maiores iste! Ipsum corporis accusamus suscipit
+        non aliquid excepturi error, consectetur alias dolore dicta deserunt
+        voluptas incidunt saepe. Nisi placeat modi velit, labore accusamus
+        tenetur voluptatum magni, id quidem sunt itaque quam qui deleniti illum
+        animi quas aliquid facere pariatur esse ipsum voluptas libero molestias.
+        Itaque, quod alias corrupti perspiciatis ex, saepe quia aliquid amet
+        officia molestiae omnis similique.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo
+        praesentium optio aliquam tenetur. Facere, architecto maxime. Eius
+        fugiat iusto, laudantium debitis dignissimos, eaque nobis pariatur
+        facilis, ut nostrum est. Voluptatum enim error ab quas. Facilis rem aut
+        dolorum dolore ex libero maiores iste! Ipsum corporis accusamus suscipit
+        non aliquid excepturi error, consectetur alias dolore dicta deserunt
+        voluptas incidunt saepe. Nisi placeat modi velit, labore accusamus
+        tenetur voluptatum magni, id quidem sunt itaque quam qui deleniti illum
+        animi quas aliquid facere pariatur esse ipsum voluptas libero molestias.
+        Itaque, quod alias corrupti perspiciatis ex, saepe quia aliquid amet
+        officia molestiae omnis similique.
+      </p>
     </div>
   </main>
 </div>

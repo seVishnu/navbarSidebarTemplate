@@ -1,5 +1,5 @@
 <div class="side-nav-content">
-  <ul class="nav-list">
+  <ul class="nav-list" [ngClass]="{ 'nav-list-open': sidebarStatus }">
     <li class="nav-list-item" *ngFor="let item of list">
       <i class="{{ item.icon }}"></i>
       <span>
